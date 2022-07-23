@@ -4,7 +4,13 @@ import Restaurant from "./Restaurant";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const RestaurantList = ({ category, myRestaurant, onCreate, onRemove }) => {
+const RestaurantList = ({
+	category,
+	myRestaurant,
+	onCreate,
+	onRemove,
+	onToggle,
+}) => {
 	const [restaurants, setRestaurants] = useState(null);
 	const [loading, setLoading] = useState(false);
 
@@ -41,7 +47,11 @@ const RestaurantList = ({ category, myRestaurant, onCreate, onRemove }) => {
 	if (category === "myPage") {
 		return (
 			<div>
-				<MyPage myRestaurant={restaurants} onRemove={onRemove} />
+				<MyPage
+					myRestaurant={restaurants}
+					onRemove={onRemove}
+					onToggle={onToggle}
+				/>
 			</div>
 		);
 	}

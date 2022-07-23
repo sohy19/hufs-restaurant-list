@@ -1,10 +1,14 @@
 import React from "react";
 import MyRestaurants from "./MyRestaurants";
 
-const MyPage = ({ myRestaurant, onRemove }) => {
+const MyPage = ({ myRestaurant, onRemove, onToggle }) => {
 	return (
 		<div>
-			<MyRestaurants myRestaurant={myRestaurant} onRemove={onRemove} />
+			<MyRestaurants
+				myRestaurant={myRestaurant}
+				onRemove={onRemove}
+				onToggle={onToggle}
+			/>
 		</div>
 	);
 };
