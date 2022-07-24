@@ -2,15 +2,17 @@ import React from "react";
 import MyRestaurants from "./MyRestaurants";
 
 const MyPage = ({ myRestaurant, onRemove, onToggle }) => {
-	return (
-		<div>
-			<MyRestaurants
-				myRestaurant={myRestaurant}
-				onRemove={onRemove}
-				onToggle={onToggle}
-			/>
-		</div>
-	);
+	return myRestaurant.map((r) => (
+		<MyRestaurants
+			key={r.id}
+			id={r.id}
+			name={r.name}
+			category={r.category}
+			checked={r.checked}
+			onRemove={onRemove}
+			onToggle={onToggle}
+		/>
+	));
 };
 
 export default MyPage;

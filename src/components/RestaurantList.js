@@ -1,7 +1,7 @@
 import React from "react";
 import MyPage from "./MyPage";
 import Restaurant from "./Restaurant";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useParams } from "react";
 import axios from "axios";
 
 const RestaurantList = ({
