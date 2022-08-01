@@ -7,7 +7,7 @@ const Home = () => {
 	// // const now = match.params.now || "all";
 	// console.log(now);
 
-	const [category, setCategory] = useState("all");
+	const [category, setCategory] = useState("전체");
 	const onSelect = useCallback((category) => setCategory(category), []);
 	const [myRestaurant, setMyRestaurant] = useState([]);
 

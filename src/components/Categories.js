@@ -44,31 +44,24 @@ const Category = styled.div`
 
 const categories = [
 	{
-		name: "all",
 		text: "전체",
 	},
 	{
-		name: "kr",
 		text: "한식",
 	},
 	{
-		name: "cn",
 		text: "중식",
 	},
 	{
-		name: "jp",
 		text: "일식",
 	},
 	{
-		name: "west",
 		text: "양식",
 	},
 	{
-		name: "cafe",
 		text: "카페",
 	},
 	{
-		name: "myPage",
 		text: "마이페이지",
 	},
 ];
@@ -76,11 +69,11 @@ const categories = [
 const Categories = ({ category, onSelect }) => {
 	return (
 		<CategoriesBlock>
-			{categories.map((c) => (
+			{categories.map((c, idx) => (
 				<Category
-					key={c.name}
-					active={category === c.name}
-					onClick={() => onSelect(c.name)}
+					key={idx}
+					active={category === c.text}
+					onClick={() => onSelect(c.text)}
 				>
 					{c.text}
 				</Category>
